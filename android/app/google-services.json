@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "735147154450",
+    "project_id": "kynn-29f8d",
+    "storage_bucket": "kynn-29f8d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735147154450:android:6b8b1631027d136229cccb",
+        "android_client_info": {
+          "package_name": "com.example.kyn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-hcc5j6k3fuAVMp5lzyZtedIPE6XIxBE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
