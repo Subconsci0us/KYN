@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:kyn/core/navigation.dart';
+import 'package:kyn/core/navigation/navigation.dart';
 
 class LoginPage extends StatefulWidget {
   static route() => MaterialPageRoute(

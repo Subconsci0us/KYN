@@ -3,7 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:kyn/auth/sign_up_page.dart';
 import 'package:kyn/firebase_options.dart';
-import 'package:kyn/core/navigation.dart';
+import 'package:kyn/core/navigation/navigation.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,9 +15,6 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
 
   @override
   Widget build(BuildContext context) {
