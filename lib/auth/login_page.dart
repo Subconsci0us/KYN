@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:kyn/core/navigation.dart';
 
 class LoginPage extends StatefulWidget {
   static route() => MaterialPageRoute(
@@ -22,17 +23,25 @@ class _LoginPageState extends State<LoginPage> {
     passwordController.dispose();
     super.dispose();
   }
-
-  Future<void> loginUserWithEmailAndPassword() async {
+ Future<void> loginUserWithEmailAndPassword() async {
     try {
-      final userCredential =
-          await FirebaseAuth.instance.signInWithEmailAndPassword(
+      final userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailController.text.trim(),
         password: passwordController.text.trim(),
       );
-      print(userCredential);
+
+      if (userCredential.user != null) {
+        // Navigate to the HomePage after successful login
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) =>  NavigationWithFAB(), // Navigate to HomePage
+          ),
+        );
+      }
     } on FirebaseAuthException catch (e) {
-      print(e.message);
+      // Show an error dialog or SnackBar if login fails
+      print(e);
     }
   }
 
