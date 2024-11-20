@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kyn/features/event/event_page.dart';
+import 'package:kyn/features/home/create_post_page.dart';
 import 'package:kyn/features/home/home_page.dart';
 import 'package:kyn/features/maps/map_page.dart';
 import 'package:kyn/features/profile/profile_page.dart'; // Adjust this import to match your project's structure
-
 
 class NavigationWithFAB extends StatefulWidget {
   @override
@@ -23,24 +23,27 @@ class _NavigationWithFABState extends State<NavigationWithFAB> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: IndexedStack(
-        index: _currentIndex, // Make sure this references the current page index
-        children:  [
-         const HomePage(),
+        index:
+            _currentIndex, // Make sure this references the current page index
+        children: [
+          const HomePage(),
           EventsPage(),
           MapPage(),
-         const ProfilePage(),
-          
+          const ProfilePage(),
         ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Define action for the FAB
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CreatePostScreen()),
+          );
         },
         shape: const CircleBorder(),
         child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-       resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: false,
       bottomNavigationBar: NavigationBar(
         destinations: const [
           NavigationDestination(
@@ -66,5 +69,3 @@ class _NavigationWithFABState extends State<NavigationWithFAB> {
     );
   }
 }
-
-

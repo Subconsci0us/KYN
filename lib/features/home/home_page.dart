@@ -40,11 +40,11 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    
+
                     // Search Bar
                     Container(
                       margin: const EdgeInsets.symmetric(vertical: 16),
-                      child: TextField(                        
+                      child: TextField(
                         decoration: InputDecoration(
                           hintText: 'Search...',
                           prefixIcon: const Icon(Icons.search),
@@ -65,7 +65,6 @@ class HomePage extends StatelessWidget {
                     SizedBox(
                       height: 40,
                       child: ListView(
-                        
                         scrollDirection: Axis.horizontal,
                         children: [
                           CategoryPill(
@@ -187,7 +186,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-           
           ],
         ),
       ),
